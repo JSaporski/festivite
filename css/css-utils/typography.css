@@ -1,0 +1,60 @@
+:root {
+  font-size: 62.5%;
+
+  /* Font Families */
+  --ff-leckerli-one: 'Leckerli One', cursive;
+  --ff-baloo-2: 'Baloo 2', sans-serif;
+  --ff-open-sans: 'Open Sans', sans-serif;
+
+  /* Headings */
+  --heading-md: 700 2.8rem var(--ff-baloo-2);
+  --heading-sm: 700 1.8rem var(--ff-baloo-2);
+
+  /* Texts */
+  --text-md-semibold: 600 1.6rem var(--ff-open-sans);
+  --text-md-regular: 400 1.6rem var(--ff-open-sans);
+  --text-sm-semibold: 600 1.4rem var(--ff-open-sans);
+  --text-sm-regular: 400 1.4rem var(--ff-open-sans);
+  --text-xs-semibold: 600 1.2rem var(--ff-open-sans);
+  --text-xs-regular: 400 1.2rem var(--ff-open-sans);
+}
+
+body {
+  font-family: var(--ff-open-sans);
+  font-size: 1.6rem;
+}
+
+h2 {
+  font: var(--heading-md);
+}
+
+legend {
+  font: var(--heading-sm);
+}
+
+label,
+figcaption {
+  font: var(--text-sm-regular);
+}
+
+input {
+  font: var(--text-md-regular);
+}
+
+.f-text-md-semibold {
+  font: var(--text-sm-regular);
+}
+
+.f-text-sm-regular {
+  font: var(--text-sm-regular);
+}
+
+.f-danger {
+  font: var(--text-xs-regular);
+}
+
+.f-logo {
+  font-family: var(--ff-leckerli-one);
+  font-size: 4rem;
+  font-weight: 400;
+}
