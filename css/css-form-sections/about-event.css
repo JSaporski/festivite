@@ -1,0 +1,15 @@
+.about-event-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+
+  & .legend-wrapper {
+    grid-column: 1 / -1;
+    margin-bottom: 0.8rem;
+  }
+
+  & .input-wrapper:has([name='event-name']),
+  & .textarea-wrapper {
+    grid-column: 1 / -1;
+  }
+}

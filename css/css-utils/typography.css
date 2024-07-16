@@ -13,6 +13,7 @@
   /* Texts */
   --text-md-semibold: 600 1.6rem var(--ff-open-sans);
   --text-md-regular: 400 1.6rem var(--ff-open-sans);
+  --text-md-light: 300 1.6rem var(--ff-open-sans);
   --text-sm-semibold: 600 1.4rem var(--ff-open-sans);
   --text-sm-regular: 400 1.4rem var(--ff-open-sans);
   --text-xs-semibold: 600 1.2rem var(--ff-open-sans);
@@ -37,12 +38,21 @@ figcaption {
   font: var(--text-sm-regular);
 }
 
-input {
+input,
+textarea {
   font: var(--text-md-regular);
 }
 
 .f-text-md-semibold {
-  font: var(--text-sm-regular);
+  font: var(--text-md-semibold);
+}
+
+.f-text-md-regular {
+  font: var(--text-md-regular);
+}
+
+.f-text-md-light {
+  font: var(--text-md-light);
 }
 
 .f-text-sm-regular {

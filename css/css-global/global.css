@@ -1,3 +1,5 @@
+@import url('./aside.css');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +7,11 @@
 }
 
 body {
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(20rem, 40rem) minmax(60rem, 1fr);
+  align-items: start;
+  gap: 2rem;
+  padding: 2rem;
 }
 
 ul {
@@ -20,4 +26,25 @@ img,
 svg {
   display: block;
   max-width: 100%;
+}
+
+main {
+  background-color: var(--shape-body);
+  padding-block: 8rem;
+  border-radius: 1.2rem;
+}
+
+form {
+  display: grid;
+  gap: 4.8rem;
+  margin-top: 4rem;
+}
+
+fieldset {
+  border: none;
+}
+
+.container {
+  width: min(56rem, calc(100% - 8rem));
+  margin-inline: auto;
 }

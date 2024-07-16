@@ -20,7 +20,7 @@
 
   /* Input */
   --input-base: #1c1f21;
-  --input-stroke: #212427;
+  --input-stroke: #363b40;
   --input-placeholder: #869198;
 
   /* Shape */
@@ -45,6 +45,15 @@ span,
 legend,
 figcaption {
   color: var(--text-heading);
+}
+
+input,
+textarea {
+  color: var(--text-heading);
+}
+
+input::placeholder {
+  color: var(--input-placeholder);
 }
 
 .c-brand-light {

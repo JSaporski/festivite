@@ -1,0 +1,101 @@
+/* Legend Component */
+.legend-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  & img {
+    width: 2.4rem;
+  }
+}
+
+/* Input Components */
+.input-wrapper,
+.radio-wrapper,
+.textarea-wrapper {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.input-wrapper input,
+.event-types-wrapper {
+  background-color: var(--input-base);
+  border: 0.1rem solid var(--input-stroke);
+  border-radius: 0.8rem;
+}
+
+.input-wrapper input:focus {
+  outline: 0.1rem solid var(--brand-light);
+  border-color: transparent;
+}
+
+.input-wrapper {
+  & input {
+    height: 4.8rem;
+    padding: 1.3rem 1.6rem;
+
+    &::placeholder {
+      color: var(--input-placeholder);
+    }
+  }
+}
+
+.radio-wrapper {
+  & .event-types-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+    height: 4.8rem;
+    padding: 0.4rem;
+
+    & .event-type {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.8rem;
+      border-radius: 0.4rem;
+
+      &:has(:checked) {
+        background-color: var(--shape-button);
+
+        & svg {
+          stroke: var(--brand-light);
+        }
+      }
+
+      & svg {
+        max-width: 1.6rem;
+      }
+
+      & span {
+        font-size: 1.4rem;
+      }
+
+      & input {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* Textarea Component */
+.textarea-wrapper {
+  & textarea {
+    height: 13.6rem;
+    padding: 1.6rem;
+    background-color: var(--input-base);
+    border: 0.1rem solid var(--input-stroke);
+    border-radius: 0.8rem;
+    resize: none;
+
+    &:focus {
+      outline: 0.1rem solid var(--brand-light);
+      border-color: transparent;
+    }
+  }
+}
