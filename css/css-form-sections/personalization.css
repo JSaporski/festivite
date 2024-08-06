@@ -1,0 +1,15 @@
+.personalization-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 2.8rem;
+
+  & .legend-wrapper {
+    grid-column: 1 / -1;
+    margin-bottom: 0.8rem;
+  }
+
+  & .input-wrapper:has([name='color']),
+  & .input-wrapper:has(.event-theme-wrapper) {
+    grid-column: 1 / -1;
+  }
+}

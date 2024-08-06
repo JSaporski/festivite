@@ -24,7 +24,8 @@
   border-radius: 0.8rem;
 }
 
-.input-wrapper input:focus {
+.input-wrapper input:focus,
+.event-types-wrapper:focus-within {
   outline: 0.1rem solid var(--brand-light);
   border-color: transparent;
 }
@@ -41,6 +42,14 @@
 }
 
 .radio-wrapper {
+  & input {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+
   & .event-types-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -71,13 +80,109 @@
       & span {
         font-size: 1.4rem;
       }
+    }
+  }
 
-      & input {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        cursor: pointer;
+  & .event-color-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.2rem;
+
+    & .event-color {
+      position: relative;
+      width: fit-content;
+      border-radius: 50%;
+      border: 0.6rem solid var(--shape-button);
+
+      & .circle {
+        width: 2.8rem;
+        height: 2.8rem;
+        border-radius: inherit;
+      }
+
+      &:has(input:hover) {
+        border-color: var(--shape-hover);
+      }
+
+      &:has(:checked) {
+        outline: 0.2rem solid var(--brand-light);
+      }
+
+      &:has(#blue) .circle {
+        background-color: var(--brand-light);
+      }
+
+      &:has(#navy) .circle {
+        background-color: var(--navy);
+      }
+
+      &:has(#purple) .circle {
+        background-color: var(--purple);
+      }
+
+      &:has(#fuschia) .circle {
+        background-color: var(--fuschia);
+      }
+
+      &:has(#pink) .circle {
+        background-color: var(--pink);
+      }
+
+      &:has(#danger) .circle {
+        background-color: var(--danger);
+      }
+
+      &:has(#orange) .circle {
+        background-color: var(--orange);
+      }
+
+      &:has(#yellow) .circle {
+        background-color: var(--yellow);
+      }
+
+      &:has(#lime) .circle {
+        background-color: var(--lime);
+      }
+
+      &:has(#green) .circle {
+        background-color: var(--green);
+      }
+
+      &:has(#cyan) .circle {
+        background-color: var(--cyan);
+      }
+    }
+  }
+
+  & .event-theme-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 0.8rem;
+
+    & .event-theme {
+      position: relative;
+      width: fit-content;
+      padding: 0.4rem;
+      text-align: center;
+      background-color: var(--shape-button);
+      border: 0.1rem solid var(--input-stroke);
+      border-radius: 0.8rem;
+
+      &:has(input:hover) {
+        background-color: var(--shape-hover);
+      }
+
+      &:has(:checked) {
+        outline: 0.2rem solid var(--brand-light);
+      }
+
+      & img {
+        border-radius: 0.4rem;
+      }
+
+      & figcaption {
+        margin-block: 0.8rem;
       }
     }
   }

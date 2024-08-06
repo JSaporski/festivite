@@ -8,7 +8,7 @@
 
 body {
   display: grid;
-  grid-template-columns: minmax(20rem, 40rem) minmax(60rem, 1fr);
+  grid-template-columns: minmax(20rem, 40rem) minmax(66rem, 1fr);
   align-items: start;
   gap: 2rem;
   padding: 2rem;
