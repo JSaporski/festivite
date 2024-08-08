@@ -1,0 +1,15 @@
+.contact-data-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.6rem;
+  row-gap: 2.8rem;
+
+  & .legend-wrapper {
+    grid-column: 1 / -1;
+    margin-bottom: 0.8rem;
+  }
+
+  & .input-wrapper:has([name='name']) {
+    grid-column: 1 / -1;
+  }
+}

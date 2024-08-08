@@ -9,7 +9,24 @@
   }
 }
 
-/* Input Components */
+/* Textarea Component */
+.textarea-wrapper {
+  & textarea {
+    height: 13.6rem;
+    padding: 1.6rem;
+    background-color: var(--input-base);
+    border: 0.1rem solid var(--input-stroke);
+    border-radius: 0.8rem;
+    resize: none;
+
+    &:focus {
+      outline: 0.1rem solid var(--brand-light);
+      border-color: transparent;
+    }
+  }
+}
+
+/* Inputs Components */
 .input-wrapper input[type='radio'],
 .input-wrapper input[type='checkbox'],
 .event-types-wrapper input[type='radio'] {
@@ -190,24 +207,6 @@
   }
 }
 
-/* Textarea Component */
-.textarea-wrapper {
-  & textarea {
-    height: 13.6rem;
-    padding: 1.6rem;
-    background-color: var(--input-base);
-    border: 0.1rem solid var(--input-stroke);
-    border-radius: 0.8rem;
-    resize: none;
-
-    &:focus {
-      outline: 0.1rem solid var(--brand-light);
-      border-color: transparent;
-    }
-  }
-}
-
-/* Switch Toggle */
 .switch-toggle-wrapper {
   display: flex;
   align-items: center;
@@ -255,7 +254,6 @@
   }
 }
 
-/* File */
 .file-upload {
   position: relative;
   display: flex;
