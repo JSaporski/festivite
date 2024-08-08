@@ -10,6 +10,16 @@
 }
 
 /* Input Components */
+.input-wrapper input[type='radio'],
+.input-wrapper input[type='checkbox'],
+.event-types-wrapper input[type='radio'] {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
 .input-wrapper,
 .radio-wrapper,
 .textarea-wrapper {
@@ -42,14 +52,6 @@
 }
 
 .radio-wrapper {
-  & input {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
-  }
-
   & .event-types-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -201,6 +203,105 @@
     &:focus {
       outline: 0.1rem solid var(--brand-light);
       border-color: transparent;
+    }
+  }
+}
+
+/* Switch Toggle */
+.switch-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  & .switch-toggle {
+    position: relative;
+    width: 6.4rem;
+    padding: 0.4rem;
+    background-color: var(--input-base);
+    border: 0.1rem solid var(--input-stroke);
+    border-radius: 999rem;
+    transition: 0.2s;
+
+    & .toggle {
+      width: 2.4rem;
+      height: 2.4rem;
+      background-color: var(--input-stroke);
+      border-radius: 50%;
+      transition: 0.2s;
+    }
+
+    &:has(:checked) {
+      background-color: var(--brand-light);
+
+      & .toggle {
+        background-color: var(--text-heading);
+        margin-left: calc(100% - 2.4rem);
+      }
+    }
+  }
+
+  & .light {
+    display: none;
+  }
+
+  &:has(:checked) {
+    & .dark {
+      display: none;
+    }
+
+    & .light {
+      display: block;
+    }
+  }
+}
+
+/* File */
+.file-upload {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  & .thumbnail {
+    all: unset;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.1rem;
+    height: 0.1rem;
+    opacity: 0;
+  }
+
+  & .upload {
+    all: unset;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    min-height: 4rem;
+    padding-inline: 1.2rem;
+    font: var(--text-sm-semibold);
+    color: var(--text-heading);
+    background-color: var(--shape-button);
+    border-radius: 0.8rem;
+    cursor: pointer;
+
+    & svg {
+      width: 1.6rem;
+      height: 1.6rem;
+      stroke: var(--brand-light);
+    }
+
+    &:hover {
+      background-color: var(--shape-hover);
+    }
+  }
+
+  & span {
+    color: var(--input-placeholder);
+
+    &.uploaded {
+      color: var(--text-heading);
     }
   }
 }

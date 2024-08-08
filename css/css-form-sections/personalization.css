@@ -12,4 +12,11 @@
   & .input-wrapper:has(.event-theme-wrapper) {
     grid-column: 1 / -1;
   }
+
+  & .style-and-thumb {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 17.6rem 1fr;
+    gap: 1.6rem;
+  }
 }
