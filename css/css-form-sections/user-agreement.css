@@ -1,0 +1,7 @@
+.user-agreement {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-top: 4rem;
+  border-top: 0.1rem solid var(--input-stroke);
+}
