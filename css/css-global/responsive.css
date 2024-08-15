@@ -1,0 +1,59 @@
+@media (max-width: 1024px) {
+  /* General */
+  body {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    width: min(56rem, calc(100% - 4rem));
+  }
+  /* */
+
+  /* Aside */
+  aside {
+    position: static;
+    min-height: 50rem;
+  }
+  /* */
+
+  /* Fieldset Wrappers */
+  .about-event-wrapper,
+  .personalization-wrapper,
+  .contact-data-wrapper {
+    grid-template-columns: 1fr;
+  }
+  /* */
+
+  /* Personalization Wrapper */
+  .personalization-wrapper {
+    & .style-and-thumb {
+      grid-template-columns: 1fr;
+      gap: 2.8rem;
+    }
+  }
+  /* */
+
+  /* Components */
+  .radio-wrapper {
+    & .event-color-wrapper {
+      justify-content: center;
+    }
+
+    & .event-theme-wrapper {
+      & .event-theme {
+        width: 100%;
+
+        & img {
+          width: inherit;
+        }
+      }
+    }
+  }
+
+  .checkbox-wrapper {
+    & input {
+      flex-shrink: 0;
+    }
+  }
+  /* */
+}

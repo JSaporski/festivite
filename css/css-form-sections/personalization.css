@@ -1,6 +1,7 @@
 .personalization-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: start;
   row-gap: 2.8rem;
 
   & .legend-wrapper {

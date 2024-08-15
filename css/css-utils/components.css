@@ -66,6 +66,21 @@
       color: var(--input-placeholder);
     }
   }
+
+  &:has(:focus:invalid) input {
+    outline-color: var(--danger);
+  }
+
+  &:has(:focus:invalid) .is-invalid {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    & small {
+      font: var(--text-xs-regular);
+      color: var(--danger);
+    }
+  }
 }
 
 .radio-wrapper {
@@ -343,6 +358,11 @@
     text-decoration: underline;
     color: var(--brand-light);
   }
+}
+
+/* Alert Component */
+.is-invalid {
+  display: none;
 }
 
 /* Button Components */

@@ -1,6 +1,7 @@
 .contact-data-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: start;
   column-gap: 1.6rem;
   row-gap: 2.8rem;
 
